@@ -219,5 +219,7 @@ int proposalInference_gpu(cudaStream_t stream, const void* rpn_prob, const void*
 
 size_t _get_workspace_size(int N, int anc_size_num, int anc_ratio_num, int H, int W, int nmsMaxOut);
 
+pluginStatus_t seluInference(cudaStream_t stream, int n, float lambd, const void* input, void* output);
+
 #endif // TRT_RPNLAYER_H
 #endif
